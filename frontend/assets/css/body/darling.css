@@ -1,0 +1,175 @@
+/* This is the css stylesheet that defines the desing for the darling side of the website */
+
+* {
+  --darling-global-family: var(--global-family, 'Times New Roman');
+  --darling-table-list-family: var(--darling-global-family, --global-family, 'Times New Roman');
+  --darling-table-list-title-family: var(--darling-global-family, --global-family, 'Times New Roman');
+  --darling-global-font-size: var(--global-font-size, 12px);
+}
+
+/* header */
+
+.darling_header {
+  background-color: white;
+  font-family: var(--darling-header-family, --darling-global-family, --global-family, 'Times New Roman');
+  font-size: var(--darling-header-font-size, --darling-global-font-size, --global-font-size, 12px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* main */
+
+.darling_main {
+  background-color: white;
+  font-family: var(--darling-main-family, --darling-global-family, --global-family, 'Times New Roman');
+  font-size: var(--darling-main-font-size, --darling-global-font-size, --global-font-size, 12px);
+}
+
+/* footer */
+
+.darling_footer {
+  background-color: white;
+  font-family: var(--darling-footer-family, --darling-global-family, --global-family, 'Times New Roman');
+  font-size: var(--darling-footer-font-size, --darling-global-font-size, --global-font-size, 12px);
+}
+
+/* Pages navigation desing */
+
+#darling_toc {
+  background-color: white;
+  font-family: var(--darling-table-list-family, --darling-global-family, --global-family, 'Times New Roman');
+  font-size: var(--darling-toc-font-size, --darling-global-font-size, --global-font-size, 12px);
+}
+
+.darling_table_list_title {
+  font-size: large;
+  text-decoration: underline;
+  color: black;
+  font-family: var(--darling-table-list-title-family, --darling-global-family, --global-family, 'Times New Roman');
+  font-size: var(--darling-table-list-title-font-size, --darling-global-font-size, --global-font-size, 12px);
+}
+
+.darling_table_list_current {
+  color: black;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: var(--darling-table-list-family, --darling-global-family, --global-family, 'Times New Roman');
+  font-size: var(--darling-table-list-current-font-size, --darling-global-font-size, --global-font-size, 12px);
+}
+
+.darling_table_list {
+  color: black;
+  list-style-type: none;
+  font-family: var(--darling-table-list-family, --darling-global-family, --global-family, 'Times New Roman');
+  font-size: var(--darling-table-list-font-size, --darling-global-font-size, --global-font-size, 12px);
+}
+
+.darling_table_list:hover {
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+/* Table path customisation */
+
+.darling_table_path_section {
+  font-family: var(--global-table-list-family, --global-family, 'Times New Roman');
+  font-size: var(--darling-table-path-section-font-size, --darling-global-font-size, --global-font-size, 12px);
+  display: flex;
+  justify-content: left;
+  flex-direction: row;
+}
+
+.darling_table_path_title {
+  font-family: var(--global-table-list-family, --global-family, 'Times New Roman');
+  font-size: var(--darling-table-path-title-font-size, --darling-global-font-size, --global-font-size, 12px);
+  padding-right: 5px;
+  text-decoration: underline;
+}
+
+.darling_table_path_link {
+  color: black;
+  font-family: var(--global-family, 'Times New Roman');
+  font-size: var(--darling-table-path-link-font-size, --darling-global-font-size, --global-font-size, 12px);
+}
+
+.darling_table_path_link:hover {
+  text-decoration: none;
+  font-style: italic;
+}
+
+.darling_table_path_seperator {
+  color: black;
+  font-family: var(--global-family, 'Times New Roman');
+  font-size: var(--darling-tabe-path-seperator-font-size, --darling-global-font-size, --global-font-size, 12px);
+  padding: 2px;
+  padding-left: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+/* The customisation for hyperlinks */
+
+.darling_a {
+  color: black;
+  font-family: var(--darling-global-family, --global-family, 'Times New Roman');
+  font-size: var(--darling-a-font-size, --darling-global-font-size, --global-font-size, 12px);
+}
+
+.darling_a:hover {
+  text-decoration: none;
+}
+
+/* Cookie design */
+
+.darling_cookie_bg {
+  background-color: black;
+  font-family: var(--global-family, 'Times New Roman');
+  font-size: var(--darling-cookie-bg-font-size, --darling-global-font-size, --global-font-size, 12px);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /*padding-left: 33%;*/
+  /*padding-right: 33%;*/
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+}
+
+.darling_cookie_banner {
+  font-family: var(--global-family, 'Times New Roman');
+  font-size: var(--darling-cookie-banner-font-size, --darling-global-font-size, --global-font-size, 12px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  height: 30px;
+}
+
+.darling_cookie_button {
+  color: black;
+  background-color: white;
+  font-family: var(--global-family, 'Times New Roman');
+  font-size: var(--darling-cookie-button-font-size, --darling-global-font-size, --global-font-size, 12px);
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.darling_cookie_text {
+  color: white;
+  font-family: var(--global-family, 'Times New Roman');
+  font-size: var(--darling-cookie-text-font-size, --darling-global-font-size, --global-font-size, 12px);
+  padding-left: 2px;
+  padding-right: 20px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
