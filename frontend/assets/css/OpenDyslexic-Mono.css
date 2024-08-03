@@ -1,0 +1,11 @@
+@font-face {
+	font-family: 'OpenDyslexic-Mono';
+	src: url(../../assets/fonts/OpenDyslexic-Mono-eb629f4f57293ea00c565dadd7e1d019.eot) format('embedded-opentype'),
+	url(../../assets/fonts/OpenDyslexic-Mono-0001bd1773f74d766cd1e21d67a39251.woff) format('woff'),
+	url(../../assets/fonts/OpenDyslexic-Mono-aad06292ef757ec867f61e2280958f11.woff2) format('woff2'),
+	url(../../assets/fonts/OpenDyslexic-Mono-5c6a423cfc1b42a6d442144d5f231383.ttf) format('truetype'),
+	url(../../assets/fonts/OpenDyslexic-Mono-a7bff4cdf0172dc3be4c186a869602fd.svg) format('svg');
+	font-weight: 400;
+	font-style: normal;
+	font-display: auto;
+}

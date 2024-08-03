@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html data-bs-theme="auto" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Verse Vault</title>
+    <link rel="canonical" href="https://versevault.pingpal.news/about/">
+    <meta property="og:url" content="https://versevault.pingpal.news/about/">
+    <meta name="google-site-verification" content="5yIQvmbwRpYz00j5rNQaimFKRW5ImwNjz_WMQSqrOp0">
+    <meta name="google" content="translate,sitelinkssearchbox">
+    <meta name="googlebot" content="index,follow,snippet">
+    <meta name="copyright" content="© Henry Letellier 2024">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Language" content="en,fr">
+    <meta name="lang" content="en,fr">
+    <meta name="charset" content="utf-8">
+    <meta name="author" content="Henry Letellier">
+    <meta name="description" content="This is  the front-end side of the Verse Vault website. This website hosts a plethora of poems and other literary content that are written by M. Leblanc, me and other people.">
+    <script>
+        (function() {
+
+            // JavaScript snippet handling Dark/Light mode switching
+
+            const getStoredTheme = () => localStorage.getItem('theme');
+            const setStoredTheme = theme => localStorage.setItem('theme', theme);
+            const forcedTheme = document.documentElement.getAttribute('data-bss-forced-theme');
+
+            const getPreferredTheme = () => {
+
+                if (forcedTheme) return forcedTheme;
+
+                const storedTheme = getStoredTheme();
+                if (storedTheme) {
+                    return storedTheme;
+                }
+
+                const pageTheme = document.documentElement.getAttribute('data-bs-theme');
+
+                if (pageTheme) {
+                    return pageTheme;
+                }
+
+                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+
+            const setTheme = theme => {
+                if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    document.documentElement.setAttribute('data-bs-theme', 'dark');
+                } else {
+                    document.documentElement.setAttribute('data-bs-theme', theme);
+                }
+            }
+
+            setTheme(getPreferredTheme());
+
+            const showActiveTheme = (theme, focus = false) => {
+                const themeSwitchers = [].slice.call(document.querySelectorAll('.theme-switcher'));
+
+                if (!themeSwitchers.length) return;
+
+                document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+                    element.classList.remove('active');
+                    element.setAttribute('aria-pressed', 'false');
+                });
+
+                for (const themeSwitcher of themeSwitchers) {
+
+                    const btnToActivate = themeSwitcher.querySelector('[data-bs-theme-value="' + theme + '"]');
+
+                    if (btnToActivate) {
+                        btnToActivate.classList.add('active');
+                        btnToActivate.setAttribute('aria-pressed', 'true');
+                    }
+                }
+            }
+
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+                const storedTheme = getStoredTheme();
+                if (storedTheme !== 'light' && storedTheme !== 'dark') {
+                    setTheme(getPreferredTheme());
+                }
+            });
+
+            window.addEventListener('DOMContentLoaded', () => {
+                showActiveTheme(getPreferredTheme());
+
+                document.querySelectorAll('[data-bs-theme-value]')
+                    .forEach(toggle => {
+                        toggle.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            const theme = toggle.getAttribute('data-bs-theme-value');
+                            setStoredTheme(theme);
+                            setTheme(theme);
+                            showActiveTheme(theme);
+                        })
+                    })
+            });
+        })();
+    </script>
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/Beta-OpenDyslexic-Bold.css">
+    <link rel="stylesheet" href="../assets/css/Beta-OpenDyslexic-Bold-Italic.css">
+    <link rel="stylesheet" href="../assets/css/Beta-OpenDyslexic-Regular.css">
+    <link rel="stylesheet" href="../assets/css/OpenDyslexic-Alt-a-Bold.css">
+    <link rel="stylesheet" href="../assets/css/OpenDyslexic-Alt-a-Bold-Italic.css">
+    <link rel="stylesheet" href="../assets/css/OpenDyslexic-Alt-a-Italic.css">
+    <link rel="stylesheet" href="../assets/css/OpenDyslexic-Alt-a-Regular.css">
+    <link rel="stylesheet" href="../assets/css/OpenDyslexic-Bold.css">
+    <link rel="stylesheet" href="../assets/css/OpenDyslexic-Bold-Italic.css">
+    <link rel="stylesheet" href="../assets/css/OpenDyslexic-Italic.css">
+    <link rel="stylesheet" href="../assets/css/OpenDyslexic-Mono.css">
+    <link rel="stylesheet" href="../assets/css/OpenDyslexic-Mono-Regular.css">
+    <link rel="stylesheet" href="../assets/css/OpenDyslexic-Regular.css">
+    <link rel="stylesheet" href="../assets/css/OpenDyslexic2-Alt-a-Bold.css">
+    <link rel="stylesheet" href="../assets/css/OpenDyslexic2-Alt-a-Bold-Italic.css">
+    <link rel="stylesheet" href="../assets/css/OpenDyslexic2-Alt-a-Italic.css">
+    <link rel="stylesheet" href="../assets/css/OpenDyslexic2-Alt-a-Regular.css">
+    <link rel="stylesheet" href="../assets/css/OpenDyslexic2-Bold.css">
+    <link rel="stylesheet" href="../assets/css/OpenDyslexic2-Bold-Italic.css">
+    <link rel="stylesheet" href="../assets/css/OpenDyslexic2-Italic.css">
+    <link rel="stylesheet" href="../assets/css/OpenDyslexic2-Regular.css">
+    <link rel="stylesheet" href="../assets/css/OpenDyslexic3-Bold.css">
+    <link rel="stylesheet" href="../assets/css/OpenDyslexic3-Regular.css">
+    <link rel="stylesheet" href="../assets/css/fonts/open_dyslexic.css">
+    <link rel="stylesheet" href="../assets/css/body/darling.css">
+    <link rel="stylesheet" href="../assets/css/body/default.css">
+    <link rel="stylesheet" href="../assets/css/body/main.css">
+    <link rel="stylesheet" href="../assets/css/body/poems.css">
+    <link rel="stylesheet" href="../assets/css/body/quotes.css">
+    <link rel="stylesheet" href="../assets/css/Features-Cards-icons.css">
+</head>
+
+<body onload="console.log(&#39;loading data&#39;);header(&#39;body_header&#39;);footer(&#39;body_footer&#39;);table_of_contents(&#39;main_toc&#39;, &#39;About&#39;, &#39;&#39;);injector(&#39;injections&#39;, &#39;&#39;);">
+    <header id="body_header"></header>
+    <main id="body_main">
+        <aside id="main_toc"></aside>
+        <section id="page_path"></section>
+        <section id="table_name"></section>
+        <section id="table_menu"></section>
+        <section id="table_content"></section>
+        <section></section>
+    </main>
+    <footer id="body_footer"></footer>
+    <section id="injections"></section>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/js/modules/cookies.mjs" type="module"></script>
+    <script src="../assets/js/modules/query.mjs" type="module"></script>
+    <script src="../assets/js/modules/user_interraction_tracker.mjs" type="module"></script>
+    <script src="../assets/js/scripts/cookie/cookie_notice.js"></script>
+    <script src="../assets/js/scripts/cookie/uid.js"></script>
+    <script src="../assets/js/scripts/dev/auto_reload.js"></script>
+    <script src="../assets/js/scripts/dev/padding.js"></script>
+    <script src="../assets/js/scripts/footer/footer_darling.js"></script>
+    <script src="../assets/js/scripts/footer/footer_poems.js"></script>
+    <script src="../assets/js/scripts/footer/footer_quotes.js"></script>
+    <script src="../assets/js/scripts/footer/footer.js"></script>
+    <script src="../assets/js/scripts/header/header_darling.js"></script>
+    <script src="../assets/js/scripts/header/header_poems.js"></script>
+    <script src="../assets/js/scripts/header/header_quotes.js"></script>
+    <script src="../assets/js/scripts/header/header.js"></script>
+    <script src="../assets/js/scripts/injector.js"></script>
+    <script src="../assets/js/scripts/location/table_of_contents.js"></script>
+    <script src="../assets/js/scripts/location/table_path.js"></script>
+    <script src="../assets/js/scripts/sql/insert_table_content.js"></script>
+    <script src="../assets/js/scripts/sql/insert_table_menu.js"></script>
+    <script src="../assets/js/scripts/sql/insert_table_name.js"></script>
+    <script src="../assets/js/scripts/style_shifter/get_correct_prefix.js"></script>
+</body>
+
+</html>

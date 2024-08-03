@@ -1,0 +1,147 @@
+/* @font-face {
+    font-family: 'OpenDyslexic';
+    src: url('open_dyslexic/from_2020/003_OpenDyslexic2_Alt-A/') format('embedded-opentype'),
+    url('open_dyslexic/from_2020/003_OpenDyslexic2_Alt-A/') format('woff'),
+    url('open_dyslexic/from_2020/003_OpenDyslexic2_Alt-A/') format('woff2'),
+    url('open_dyslexic/from_2020/003_OpenDyslexic2_Alt-A/') format('truetype'),
+    url('open_dyslexic/from_2020/003_OpenDyslexic2_Alt-A/') format('svg');
+} */
+
+/* 'OpenDyslexic-Bold', */
+
+.open_dyslexic_bold {
+  font-family: 'OpenDyslexic-Bold';
+}
+
+/* 'OpenDyslexic-Italic', */
+
+.open_dyslexic_italic {
+  font-family: 'OpenDyslexic-Italic';
+}
+
+/* 'OpenDyslexic-Regular', */
+
+.open_dyslexic_regular {
+  font-family: 'OpenDyslexic-Regular';
+}
+
+/* OpenDyslexic-Bold-Italic */
+
+.open_dyslexic_bold_italic {
+  font-family: 'OpenDyslexic-Bold-Italic';
+}
+
+/* OpenDyslexic-Alt-a-bold */
+
+.open_dyslexic_alt_a_bold {
+  font-family: 'OpenDyslexic-Alt-a-Bold';
+}
+
+/* 'OpenDyslexic-Alt-a-Italic', */
+
+.open_dyslexic_alt_a_italic {
+  font-family: 'OpenDyslexic-Alt-a-Italic';
+}
+
+/* 'OpenDyslexic-Alt-a-Regular', */
+
+.open_dyslexic_alt_a_regular {
+  font-family: 'OpenDyslexic-Alt-a-Regular';
+}
+
+/* 'OpenDyslexic-Alt-a-Bold-Italic', */
+
+.open_dyslexic_alt_a_bold_italic {
+  font-family: 'OpenDyslexic-Alt-a-Bold-Italic';
+}
+
+/* 'OpenDyslexic-Mono-Regular', */
+
+.open_dyslexic_mono_regular {
+  font-family: 'OpenDyslexic-Mono-Regular';
+}
+
+/* 'Beta-OpenDyslexic-Bold', */
+
+.beta_open_dyslexic_bold {
+  font-family: 'Beta-OpenDyslexic-Bold';
+}
+
+/* 'Beta-OpenDyslexic-Bold-Italic', */
+
+.beta_open_dyslexic_bold_italic {
+  font-family: 'Beta-OpenDyslexic-Bold-Italic';
+}
+
+/* 'Beta-OpenDyslexic-Regular', */
+
+.beta_open_dyslexic_regular {
+  font-family: 'Beta-OpenDyslexic-Regular';
+}
+
+/* 'OpenDyslexic2-Bold', */
+
+.open_dyslexic2_bold {
+  font-family: 'OpenDyslexic2-Bold';
+}
+
+/* 'OpenDyslexic2-Italic', */
+
+.open_dyslexic2_italic {
+  font-family: 'OpenDyslexic2-Italic';
+}
+
+/* 'OpenDyslexic2-Bold-Italic' */
+
+.open_dyslexic2_bold_italic {
+  font-family: 'OpenDyslexic2-Bold-Italic';
+}
+
+/* 'OpenDyslexic2-Regular', */
+
+.open_dyslexic2_regular {
+  font-family: 'OpenDyslexic2-Regular';
+}
+
+/* 'OpenDyslexic2-Alt-a-Bold', */
+
+.open_dyslexic2_alt_a_bold {
+  font-family: 'OpenDyslexic2-Alt-a-Bold';
+}
+
+/* 'OpenDyslexic2-Alt-a-Bold-Italic', */
+
+.open_dyslexic2_alt_a_bold_italic {
+  font-family: 'OpenDyslexic2-Alt-a-Bold-Italic';
+}
+
+/* 'OpenDyslexic2-Alt-a-Italic', */
+
+.open_dyslexic2_alt_a_italic {
+  font-family: 'OpenDyslexic2-Alt-a-Italic';
+}
+
+/* 'OpenDyslexic2-Alt-a-Regular', */
+
+.open_dyslexic2_alt_a_regular {
+  font-family: 'OpenDyslexic2-Alt-a-Regular';
+}
+
+/* 'OpenDyslexic3-Bold', */
+
+.open_dyslexic3_bold {
+  font-family: 'OpenDyslexic3-Bold';
+}
+
+/* 'OpenDyslexic3-Regular', */
+
+.open_dyslexic3_regular {
+  font-family: 'OpenDyslexic3-Regular';
+}
+
+/* 'OpenDyslexic-Mono'; */
+
+.open_dyslexic_mono {
+  font-family: 'OpenDyslexic-Mono';
+}
+

@@ -1,0 +1,203 @@
+/* This is the css stylesheet that defines the desing for the quotes side of the website */
+
+* {
+  --quotes-global-family: var(--global-family, 'Times New Roman');
+  --quotes-table-list-family: var(--quotes-global-family, --global-family, 'Times New Roman');
+  --quotes-table-list-title-family: var(--quotes-global-family, --global-family, 'Times New Roman');
+  --quotes-quote-family: var(--quotes-global-family, --global-family, 'Times New Roman');
+  --quotes-quote-author-family: var(--quotes-global-family, --global-family, 'Times New Roman');
+  --quotes-global-font-size: var(--global-font-size, 12px);
+}
+
+/* header */
+
+.quotes_header {
+  background-color: white;
+  font-family: var(--quotes-header-family, --quotes-global-family, --global-family, 'Times New Roman');
+  font-size: var(--quotes-header-font-size, --quotes-global-font-size, --global-font-size, 12px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* main */
+
+.quotes_main {
+  background-color: white;
+  font-family: var(--quotes-main-family, --quotes-global-family, --global-family, 'Times New Roman');
+  font-size: var(--quotes-main-font-size, --quotes-global-font-size, --global-font-size, 12px);
+}
+
+/* footer */
+
+.quotes_footer {
+  background-color: white;
+  font-family: var(--quotes-footer-family, --quotes-global-family, --global-family, 'Times New Roman');
+  font-size: var(--quotes-footer-font-size, --quotes-global-font-size, --global-font-size, 12px);
+}
+
+/* Pages navigation desing */
+
+#quotes_toc {
+  background-color: white;
+  font-family: var(--quotes-table-list-family, --quotes-global-family, --global-family, 'Times New Roman');
+  font-size: var(--quotes-table-list-font-size, --quotes-global-font-size, --global-font-size, 12px);
+}
+
+.quotes_table_list_title {
+  font-size: large;
+  text-decoration: underline;
+  color: black;
+  font-family: var(--quotes-table-list-title-family, --quotes-global-family, --global-family, 'Times New Roman');
+  font-size: var(--quotes-table-list-title-font-size, --quotes-global-font-size, --global-font-size, 12px);
+}
+
+.quotes_table_list_current {
+  color: black;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: var(--quotes-table-list-family, --quotes-global-family, --global-family, 'Times New Roman');
+  font-size: var(--quotes-table-list-font-size, --quotes-global-font-size, --global-font-size, 12px);
+}
+
+.quotes_table_list {
+  color: black;
+  list-style-type: none;
+  font-family: var(--quotes-table-list-family, --quotes-global-family, --global-family, 'Times New Roman');
+  font-size: var(--quotes-table-list-font-size, --quotes-global-font-size, --global-font-size, 12px);
+}
+
+.quotes_table_list:hover {
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+/* Table path customisation */
+
+.quotes_table_path_section {
+  font-family: var(--global-table-list-family, --global-family, 'Times New Roman');
+  font-size: var(--quotes-table-path-section-font-size, --quotes-global-font-size, --global-font-size, 12px);
+  display: flex;
+  justify-content: left;
+  flex-direction: row;
+}
+
+.quotes_table_path_title {
+  font-family: var(--global-table-list-family, --global-family, 'Times New Roman');
+  font-size: var(--quotes-table-path-title-font-size, --quotes-global-font-size, --global-font-size, 12px);
+  padding-right: 5px;
+  text-decoration: underline;
+}
+
+.quotes_table_path_link {
+  color: black;
+  font-family: var(--global-family, 'Times New Roman');
+  font-size: var(--quotes-table-path-link-font-size, --quotes-global-font-size, --global-font-size, 12px);
+}
+
+.quotes_table_path_link:hover {
+  text-decoration: none;
+  font-style: italic;
+}
+
+.quotes_table_path_seperator {
+  color: black;
+  font-family: var(--global-family, 'Times New Roman');
+  font-size: var(--quotes-table-path-seperator-font-size, --quotes-global-font-size, --global-font-size, 12px);
+  padding: 2px;
+  padding-left: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+/* The customisation for hyperlinks */
+
+.quotes_a {
+  color: black;
+  font-family: var(--global-body-family, --quotes-global-family, --global-family, 'Times New Roman');
+  font-size: var(--quotes-a-font-size, --quotes-global-font-size, --global-font-size, 12px);
+}
+
+.quotes_a:hover {
+  text-decoration: none;
+}
+
+/* Quotes design */
+
+.quotes_quote_bg {
+  background-color: white;
+  font-family: var(--quotes-quote-family, --quotes-global-family, --global-family, 'Times New Roman');
+  font-size: var(--quotes-quote-bg-font-size, --quotes-global-font-size, --global-font-size, 12px);
+}
+
+.quotes_quote {
+  font-size: large;
+  font-weight: bold;
+  font-style: italic;
+  color: black;
+  font-family: var(--quotes-quote-family, --quotes-global-family, --global-family, 'Times New Roman');
+  font-size: var(--quotes-quote-font-size, --quotes-global-font-size, --global-font-size, 12px);
+}
+
+.quotes_quote_author {
+  font-size: large;
+  font-weight: bold;
+  font-style: normal;
+  color: black;
+  font-family: var(--quotes-quote-author-family, --quotes-global-family, --global-family, 'Times New Roman');
+  font-size: var(--quotes-quote-author-font-size, --quotes-global-font-size, --global-font-size, 12px);
+}
+
+/* Cookie design */
+
+.quotes_cookie_bg {
+  background-color: black;
+  font-family: var(--global-family, 'Times New Roman');
+  font-size: var(--quotes-cookie-bg-font-size, --quotes-global-font-size, --global-font-size, 12px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /*padding-left: 33%;*/
+  /*padding-right: 33%;*/
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+}
+
+.quotes_cookie_banner {
+  font-family: var(--global-family, 'Times New Roman');
+  font-size: var(--quotes-cookie-banner-font-size, --quotes-global-font-size, --global-font-size, 12px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  height: 30px;
+}
+
+.quotes_cookie_button {
+  color: black;
+  background-color: white;
+  font-family: var(--global-family, 'Times New Roman');
+  font-size: var(--quotes-cookie-button-font-size, --quotes-global-font-size, --global-font-size, 12px);
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.quotes_cookie_text {
+  color: white;
+  font-family: var(--global-family, 'Times New Roman');
+  font-size: var(--quotes-cookie-text-font-size, --quotes-global-font-size, --global-font-size, 12px);
+  padding-left: 2px;
+  padding-right: 20px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+

@@ -1,0 +1,187 @@
+/* This is the css stylesheet that will contain general css rules for overriding bootstrap designs */
+
+/* This is the css stylesheet that defines the desing for the quotes side of the website */
+
+* {
+  --global-family: 'Times New Roman';
+  --global-table-list-family: var(--global-family, 'Times New Roman');
+  --global-table-list-title-family: var(--global-family, 'Times New Roman');
+  --global-font-size: 20px;
+}
+
+/* header */
+
+.header {
+  background-color: white;
+  font-family: var(--global-header-family, --global-family, 'Times New Roman');
+  font-size: var(--global-font-size, 12px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* main */
+
+.main {
+  background-color: white;
+  font-family: var(--global-main-family, --global-family, 'Times New Roman');
+  font-size: var(--global-font-size, 12px);
+}
+
+/* footer */
+
+.footer {
+  background-color: white;
+  font-family: var(--global-footer-family, --global-family, 'Times New Roman');
+  font-size: var(--global-font-size, 12px);
+}
+
+/* Pages navigation desing */
+
+#toc {
+  background-color: white;
+  font-family: var(--global-table-list-family, --global-family, 'Times New Roman');
+  font-size: var(--global-font-size, 12px);
+}
+
+.table_list_title {
+  font-size: large;
+  text-decoration: underline;
+  color: black;
+  font-family: var(--global-table-list-title-family, --global-family, 'Times New Roman');
+  font-size: var(--global-font-size, 12px);
+}
+
+.table_list_current {
+  color: black;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: var(--global-table-list-family, --global-family, 'Times New Roman');
+  font-size: var(--global-font-size, 12px);
+}
+
+.table_list {
+  color: black;
+  list-style-type: none;
+  font-family: var(--global-table-list-family, --global-family, 'Times New Roman');
+  font-size: var(--global-font-size, 12px);
+}
+
+.table_list:hover {
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+/* Table path customisation */
+
+.table_path_section {
+  font-family: var(--global-table-list-family, --global-family, 'Times New Roman');
+  font-size: var(--global-font-size, 12px);
+  display: flex;
+  justify-content: left;
+  flex-direction: row;
+}
+
+.table_path_title {
+  font-family: var(--global-table-list-family, --global-family, 'Times New Roman');
+  font-size: var(--global-font-size, 12px);
+  padding-right: 5px;
+  text-decoration: underline;
+}
+
+.table_path_link {
+  color: black;
+  font-family: var(--global-family, 'Times New Roman');
+  font-size: var(--global-font-size, 12px);
+}
+
+.table_path_link:hover {
+  text-decoration: none;
+  font-style: italic;
+}
+
+.table_path_seperator {
+  color: black;
+  font-family: var(--global-family, 'Times New Roman');
+  font-size: var(--global-font-size, 12px);
+  padding: 2px;
+  padding-left: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+/* The customisation for hyperlinks */
+
+.a {
+  color: black;
+  font-family: var(--global-family, 'Times New Roman');
+  font-size: var(--global-font-size, 12px);
+}
+
+.a:hover {
+  text-decoration: none;
+}
+
+/* Cookie design */
+
+.cookie_bg {
+  background-color: black;
+  font-family: var(--global-family, 'Times New Roman');
+  font-size: var(--global-font-size, 12px);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /*padding-left: 33%;*/
+  /*padding-right: 33%;*/
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+}
+
+.cookie_banner {
+  font-family: var(--global-family, 'Times New Roman');
+  font-size: var(--global-font-size, 12px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  height: 40px;
+}
+
+.cookie_button {
+  color: black;
+  background-color: white;
+  font-family: var(--global-family, 'Times New Roman');
+  font-size: var(--global-font-size, 12px);
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.cookie_text {
+  color: white;
+  font-family: var(--global-family, 'Times New Roman');
+  font-size: var(--global-font-size, 12px);
+  padding-left: 2px;
+  padding-right: 20px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.cookie_link {
+  color: white;
+  font-family: var(--global-family, 'Times New Roman');
+  font-size: var(--global-font-size, 12px);
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+

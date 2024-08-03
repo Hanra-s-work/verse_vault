@@ -1,0 +1,222 @@
+/* This is the css stylesheet that defines the desing for the poem side of the website */
+
+* {
+  --poems-global-family: var(--global-family, 'Times New Roman');
+  --poems-body-family: var(--poems-global-family, --global-family, 'Times New Roman');
+  --poems-title-family: var(--poems-global-family, --global-family, 'Times New Roman');
+  --poems-author-family: var(--poems-global-family, --global-family, 'Times New Roman');
+  --poems-table-list-family: var(--poems-global-family, --global-family, 'Times New Roman');
+  --poems-table-list-title-family: var(--poems-global-family, --global-family, 'Times New Roman');
+  --poems-global-font-size: var(--global-font-size, 12px);
+}
+
+/* header */
+
+.poems_header {
+  background-color: white;
+  font-family: var(--poems-header-family, --poems-global-family, --global-family, 'Times New Roman');
+  font-size: var(--poems-header-font-size, --poems-global-font-size, --global-font-size, 12px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* main */
+
+.poems_main {
+  background-color: white;
+  font-family: var(--poems-main-family, --poems-global-family, --global-family, 'Times New Roman');
+  font-size: var(--poems-main-font-size, --poems-global-font-size, --global-font-size, 12px);
+}
+
+/* footer */
+
+.poems_footer {
+  background-color: white;
+  font-family: var(--poems-footer-family, --poems-global-family, --global-family, 'Times New Roman');
+  font-size: var(--poems-footer-font-size, --poems-global-font-size, --global-font-size, 12px);
+}
+
+/* Pages navigation desing */
+
+#poems_toc {
+  background-color: white;
+  font-family: var(--poems-table-list-family, --poems-global-family, --global-family, 'Times New Roman');
+  font-size: var(--poems-toc-font-size, --poems-global-font-size, --global-font-size, 12px);
+}
+
+.poems_table_list_title {
+  font-size: large;
+  text-decoration: underline;
+  color: black;
+  font-family: var(--poems-table-list-title-family, --poems-global-family, --global-family, 'Times New Roman');
+  font-size: var(--poems-table-list-title-font-size, --poems-global-font-size, --global-font-size, 12px);
+}
+
+.poems_table_list_current {
+  color: black;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: var(--poems-table-list-family, --poems-global-family, --global-family, 'Times New Roman');
+  font-size: var(--poems-table-list-current-font-size, --poems-global-font-size, --global-font-size, 12px);
+}
+
+.poems_table_list {
+  color: black;
+  list-style-type: none;
+  font-family: var(--poems-table-list-family, --poems-global-family, --global-family, 'Times New Roman');
+  font-size: var(--poems-table-list-font-size, --poems-global-font-size, --global-font-size, 12px);
+}
+
+.poems_table_list:hover {
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+/* Table path customisation */
+
+.poems_table_path_section {
+  font-family: var(--global-table-list-family, --global-family, 'Times New Roman');
+  font-size: var(--poems-table-path-section-font-size, --poems-global-font-size, --global-font-size, 12px);
+  display: flex;
+  justify-content: left;
+  flex-direction: row;
+}
+
+.poems_table_path_title {
+  font-family: var(--global-table-list-family, --global-family, 'Times New Roman');
+  font-size: var(--poems-table-path-title-font-size, --poems-global-font-size, --global-font-size, 12px);
+  padding-right: 5px;
+  text-decoration: underline;
+}
+
+.poems_table_path_link {
+  color: black;
+  font-family: var(--global-family, 'Times New Roman');
+  font-size: var(--poems-table-path-link-font-size, --poems-global-font-size, --global-font-size, 12px);
+}
+
+.poems_table_path_link:hover {
+  text-decoration: none;
+  font-style: italic;
+}
+
+.poems_table_path_seperator {
+  color: black;
+  font-family: var(--global-family, 'Times New Roman');
+  font-size: var(--poems-table-path-seperator-font-size, --poems-global-font-size, --global-font-size, 12px);
+  padding: 2px;
+  padding-left: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+/* The customisation for hyperlinks */
+
+.poems_a {
+  color: black;
+  font-family: var(--poems-global-family, --global-family, 'Times New Roman');
+  font-size: var(--poems-a-font-size, --poems-global-font-size, --global-font-size, 12px);
+}
+
+.poems_a:hover {
+  text-decoration: none;
+}
+
+/* Poems design */
+
+/* This is the css section where the desing for the body of the poem will be */
+
+.poem_title_bg {
+  background-color: white;
+}
+
+.poem_title {
+  font-size: x-large;
+  text-align: center;
+  color: black;
+  font-family: var(--poems-title-family, --poems-global-family, --global-family, 'Times New Roman');
+  font-size: var(--poems-title-font-size, --poems-global-font-size, --global-font-size, 12px);
+}
+
+.poem_body_bg {
+  background-color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.poem_body {
+  font-weight: normal;
+  text-align: left;
+  color: black;
+  font-family: var(--poems-body-family, --poems-global-family, --global-family, 'Times New Roman');
+  font-size: var(--poems-body-font-size, --poems-global-font-size, --global-font-size, 12px);
+}
+
+.poem_author_bg {
+  background-color: white;
+}
+
+.poem_author {
+  font-size: small;
+  text-align: right;
+  color: black;
+  font-family: var(--poems-author-family, --poems-global-family, --global-family, 'Times New Roman');
+  font-size: var(--poems-author-font-size, --poems-global-font-size, --global-font-size, 12px);
+}
+
+/* Cookie design */
+
+.poems_cookie_bg {
+  background-color: black;
+  font-family: var(--global-family, 'Times New Roman');
+  font-size: var(--poems-cookie-bg-font-size, --poems-global-font-size, --global-font-size, 12px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /*padding-left: 33%;*/
+  /*padding-right: 33%;*/
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+}
+
+.poems_cookie_banner {
+  font-family: var(--global-family, 'Times New Roman');
+  font-size: var(--poems-cookie-banner-font-size, --poems-global-font-size, --global-font-size, 12px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  height: 30px;
+}
+
+.poems_cookie_button {
+  color: black;
+  background-color: white;
+  font-family: var(--global-family, 'Times New Roman');
+  font-size: var(--poems-cookie-buttin-font-size, --poems-global-font-size, --global-font-size, 12px);
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.poems_cookie_text {
+  color: white;
+  font-family: var(--global-family, 'Times New Roman');
+  font-size: var(--poems-cookie-text-font-size, --poems-global-font-size, --global-font-size, 12px);
+  padding-left: 2px;
+  padding-right: 20px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
