@@ -4,8 +4,11 @@
   --global-fg: var(--bs-body-color, black);
   --global-bg: var(--bs-body-bg, white);
   --global-family: 'Times New Roman';
-  --global-table-list-family: var(--global-family, 'Times New Roman');
-  --global-table-list-title-family: var(--global-family, 'Times New Roman');
+  --global-table-list-family: var(--global-family);
+  --global-table-list-title-family: var(--global-family);
+  --global-header-family: var(--global-family);
+  --global-main-family: var(--global-family);
+  --global-footer-family: var(--global-family);
   --global-font-size: 20px;
   --sql-table-even-colour-bg: #FAE0AF;
   --sql-table-odd-colour-bg: #D0E4F5;
@@ -18,7 +21,7 @@
 
 .header {
   background-color: white;
-  font-family: var(--global-header-family, --global-family, 'Times New Roman');
+  font-family: var(--global-header-family);
   font-size: var(--global-font-size, 12px);
   display: flex;
   flex-direction: row;
@@ -100,7 +103,7 @@
 
 .main {
   background-color: white;
-  font-family: var(--global-main-family, --global-family, 'Times New Roman');
+  font-family: var(--global-main-family);
   font-size: var(--global-font-size, 12px);
 }
 
@@ -108,7 +111,7 @@
 
 .footer {
   background-color: white;
-  font-family: var(--global-footer-family, --global-family, 'Times New Roman');
+  font-family: var(--global-footer-family);
   font-size: var(--global-font-size, 12px);
 }
 
@@ -116,7 +119,7 @@
 
 #toc {
   background-color: white;
-  font-family: var(--global-table-list-family, --global-family, 'Times New Roman');
+  font-family: var(--global-table-list-family);
   font-size: var(--global-font-size, 12px);
 }
 
@@ -124,7 +127,7 @@
   font-size: large;
   text-decoration: underline;
   color: black;
-  font-family: var(--global-table-list-title-family, --global-family, 'Times New Roman');
+  font-family: var(--global-table-list-title-family);
   font-size: var(--global-font-size, 12px);
 }
 
@@ -132,14 +135,14 @@
   color: black;
   text-decoration: none;
   list-style-type: none;
-  font-family: var(--global-table-list-family, --global-family, 'Times New Roman');
+  font-family: var(--global-table-list-family);
   font-size: var(--global-font-size, 12px);
 }
 
 .table_list {
   color: black;
   list-style-type: none;
-  font-family: var(--global-table-list-family, --global-family, 'Times New Roman');
+  font-family: var(--global-table-list-family);
   font-size: var(--global-font-size, 12px);
 }
 
@@ -153,7 +156,7 @@
 /* Table path customisation */
 
 .table_path_section {
-  font-family: var(--global-table-list-family, --global-family, 'Times New Roman');
+  font-family: var(--global-table-list-family);
   font-size: var(--global-font-size, 12px);
   display: flex;
   justify-content: left;
@@ -161,7 +164,7 @@
 }
 
 .table_path_title {
-  font-family: var(--global-table-list-family, --global-family, 'Times New Roman');
+  font-family: var(--global-table-list-family);
   font-size: var(--global-font-size, 12px);
   padding-right: 5px;
   text-decoration: underline;
@@ -169,7 +172,7 @@
 
 .table_path_link {
   color: black;
-  font-family: var(--global-family, 'Times New Roman');
+  font-family: var(--global-family);
   font-size: var(--global-font-size, 12px);
 }
 
@@ -180,7 +183,7 @@
 
 .table_path_seperator {
   color: black;
-  font-family: var(--global-family, 'Times New Roman');
+  font-family: var(--global-family);
   font-size: var(--global-font-size, 12px);
   padding: 2px;
   padding-left: 0px;
@@ -192,7 +195,7 @@
 
 .a {
   color: black;
-  font-family: var(--global-family, 'Times New Roman');
+  font-family: var(--global-family);
   font-size: var(--global-font-size, 12px);
 }
 
@@ -204,7 +207,7 @@
 
 .cookie_bg {
   background-color: black;
-  font-family: var(--global-family, 'Times New Roman');
+  font-family: var(--global-family);
   font-size: var(--global-font-size, 12px);
   display: flex;
   flex-direction: row;
@@ -218,7 +221,7 @@
 }
 
 .cookie_banner {
-  font-family: var(--global-family, 'Times New Roman');
+  font-family: var(--global-family);
   font-size: var(--global-font-size, 12px);
   display: flex;
   flex-direction: row;
@@ -233,7 +236,7 @@
 .cookie_button {
   color: black;
   background-color: white;
-  font-family: var(--global-family, 'Times New Roman');
+  font-family: var(--global-family);
   font-size: var(--global-font-size, 12px);
   padding-top: 0px;
   padding-bottom: 0px;
@@ -241,7 +244,7 @@
 
 .cookie_text {
   color: white;
-  font-family: var(--global-family, 'Times New Roman');
+  font-family: var(--global-family);
   font-size: var(--global-font-size, 12px);
   padding-left: 2px;
   padding-right: 20px;
@@ -251,7 +254,7 @@
 
 .cookie_link {
   color: white;
-  font-family: var(--global-family, 'Times New Roman');
+  font-family: var(--global-family);
   font-size: var(--global-font-size, 12px);
   padding-left: 0px;
   padding-right: 0px;
@@ -263,7 +266,7 @@
 
 .sql_control_menu {
   background-color: white;
-  font-family: var(--global-family, 'Times New Roman');
+  font-family: var(--global-family);
   font-size: var(--global-font-size, 12px);
   display: flex;
   flex-direction: row;

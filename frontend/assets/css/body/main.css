@@ -1,9 +1,12 @@
 /* This is the css stylesheet that defines the rules for the main section of the website */
 
 .root {
-  --main-global-family: var(--global-family, 'Times New Roman');
-  --main-table-list-family: var(--main-global-family, --global-family, 'Times New Roman');
-  --main-table-list-title-family: var(--main-global-family, --global-family, 'Times New Roman');
+  --main-global-family: var(--main-global-family);
+  --main-header-family: var(--main-global-family);
+  --main-main-family: var(--main-global-family);
+  --main-footer-family: var(--main-global-family);
+  --main-table-list-family: var(--main-global-family);
+  --main-table-list-title-family: var(--main-global-family);
   --main-global-font-size: var(--global-font-size, 12px);
 }
 
@@ -11,7 +14,7 @@
 
 .main_header {
   background-color: white;
-  font-family: var(--main-header-family, --main-global-family, --global-family, 'Times New Roman');
+  font-family: var(--main-header-family);
   font-size: var(--main-header-font-size, --main-global-font-size, --global-font-size, 12px);
   display: flex;
   flex-direction: row;
@@ -26,6 +29,73 @@
   position: fixed;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+/* Settings pop-out window */
+
+/* Basic styling */
+
+.main_header_settings_hidden {
+  display: none;
+}
+
+/* Flex layout for sections */
+
+.main_header_settings_menu_container section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.main_header_settings_menu_container p {
+  margin-right: 10px;
+}
+
+/* The setting button container desing */
+
+.main_header_settings_settings_trigger {
+  color: black;
+  background-color: white;
+}
+
+.main_header_settings_settings_trigger_button {
+  font-weight: bold;
+}
+
+/* Font styling */
+
+.main_header_settings_font_section {
+  display: flex;
+  flex-direction: row;
+}
+
+.main_header_settings_font_select {
+}
+
+/* Size styling */
+
+.main_header_settings_size_section {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Theme styling */
+
+.main_header_settings_theme_section {
+  display: flex;
+  flex-direction: row;
+}
+
+.main_header_settings_settings_menu_container {
+  position: fixed;
+  top: 42px;
+  right: 0;
+  z-index: 1000;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--global-bg);
+}
+
+/* Header styling */
 
 .main_header_left {
   width: 64px;
@@ -79,7 +149,7 @@
 
 .main_main {
   background-color: white;
-  font-family: var(--main-main-family, --main-global-family, --global-family, 'Times New Roman');
+  font-family: var(--main-main-family);
   font-size: var(--main-main-font-size, --main-global-font-size, --global-font-size, 12px);
 }
 
@@ -87,7 +157,7 @@
 
 .main_footer {
   background-color: white;
-  font-family: var(--main-footer-family, --main-global-family, --global-family, 'Times New Roman');
+  font-family: var(--main-footer-family);
   font-size: var(--main-footer-font-size, --main-global-font-size, --global-font-size, 12px);
 }
 
@@ -95,7 +165,7 @@
 
 #main_toc {
   background-color: white;
-  font-family: var(--main-table-list-family, --main-global-family, --global-family, 'Times New Roman');
+  font-family: var(--main-table-list-family);
   font-size: var(--main-toc-font-size, --main-global-font-size, --global-font-size, 12px);
 }
 
@@ -103,7 +173,7 @@
   font-size: large;
   text-decoration: underline;
   color: black;
-  font-family: var(--main-table-list-title-family, --main-global-family, --global-family, 'Times New Roman');
+  font-family: var(--main-table-list-title-family);
   font-size: var(--main-table-list-title-font-size, --main-global-font-size, --global-font-size, 12px);
 }
 
@@ -111,14 +181,14 @@
   color: black;
   text-decoration: none;
   list-style-type: none;
-  font-family: var(--main-table-list-family, --main-global-family, --global-family, 'Times New Roman');
+  font-family: var(--main-table-list-family);
   font-size: var(--main-table-list-current-font-size, --main-global-font-size, --global-font-size, 12px);
 }
 
 .main_table_list {
   color: black;
   list-style-type: none;
-  font-family: var(--main-table-list-family, --main-global-family, --global-family, 'Times New Roman');
+  font-family: var(--main-table-list-family);
   font-size: var(--main-table-list-font-size, --main-global-font-size, --global-font-size, 12px);
 }
 
@@ -132,7 +202,7 @@
 /* Table path customisation */
 
 .main_table_path_section {
-  font-family: var(--global-table-list-family, --global-family, 'Times New Roman');
+  font-family: var(--main-table-list-family);
   font-size: var(--main-table-path-section-font-size, --main-global-font-size, --global-font-size, 12px);
   display: flex;
   justify-content: left;
@@ -140,7 +210,7 @@
 }
 
 .main_table_path_title {
-  font-family: var(--global-table-list-family, --global-family, 'Times New Roman');
+  font-family: var(--main-table-list-family);
   font-size: var(--main-table-path-title-font-size, --main-global-font-size, --global-font-size, 12px);
   padding-right: 5px;
   text-decoration: underline;
@@ -148,7 +218,7 @@
 
 .main_table_path_link {
   color: black;
-  font-family: var(--global-family, 'Times New Roman');
+  font-family: var(--main-global-family);
   font-size: var(--main-table-path-link-font-size, --main-global-font-size, --global-font-size, 12px);
 }
 
@@ -159,7 +229,7 @@
 
 .main_table_path_seperator {
   color: black;
-  font-family: var(--global-family, 'Times New Roman');
+  font-family: var(--main-global-family);
   font-size: var(--main-table-path-seperator-font-size, --main-global-font-size, --global-font-size, 12px);
   padding: 2px;
   padding-left: 0px;
@@ -171,7 +241,7 @@
 
 .main_a {
   color: black;
-  font-family: var(--main-global-family, --global-family, 'Times New Roman');
+  font-family: var(--main-global-family);
   font-size: var(--main-a-font-size, --main-global-font-size, --global-font-size, 12px);
 }
 
@@ -183,7 +253,7 @@
 
 .main_cookie_bg {
   background-color: black;
-  font-family: var(--global-family, 'Times New Roman');
+  font-family: var(--main-global-family);
   font-size: var(--main-cookie-bg-font-size, --main-global-font-size, --global-font-size, 12px);
   display: flex;
   flex-direction: row;
@@ -197,7 +267,7 @@
 }
 
 .main_cookie_banner {
-  font-family: var(--global-family, 'Times New Roman');
+  font-family: var(--main-global-family);
   font-size: var(--main-cookie-banner-font-size, --main-global-font-size, --global-font-size, 12px);
   display: flex;
   flex-direction: row;
@@ -212,7 +282,7 @@
 .main_cookie_button {
   color: black;
   background-color: white;
-  font-family: var(--global-family, 'Times New Roman');
+  font-family: var(--main-global-family);
   font-size: var(--main-cookie-button-font-size, --main-global-font-size, --global-font-size, 12px);
   padding-top: 0px;
   padding-bottom: 0px;
@@ -220,7 +290,7 @@
 
 .main_cookie_text {
   color: white;
-  font-family: var(--global-family, 'Times New Roman');
+  font-family: var(--main-global-family);
   font-size: var(--main-cookie-text-font-size, --main-global-font-size, --global-font-size, 12px);
   padding-left: 2px;
   padding-right: 20px;
