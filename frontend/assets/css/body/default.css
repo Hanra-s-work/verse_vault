@@ -1,12 +1,17 @@
 /* This is the css stylesheet that will contain general css rules for overriding bootstrap designs */
 
-/* This is the css stylesheet that defines the desing for the quotes side of the website */
-
 * {
+  --global-fg: black;
+  --global-bg: white;
   --global-family: 'Times New Roman';
   --global-table-list-family: var(--global-family, 'Times New Roman');
   --global-table-list-title-family: var(--global-family, 'Times New Roman');
   --global-font-size: 20px;
+  --sql-table-even-colour-bg: #FAE0AF;
+  --sql-table-odd-colour-bg: #D0E4F5;
+  --sql-table-body-font-size: var(--global-font-size, 13px);
+  --sql-table-headings-font-size: var(--global-font-size);
+  --sql-table-scrollbar-width: 12px;
 }
 
 /* header */
@@ -183,5 +188,119 @@
   padding-right: 0px;
   padding-top: 0px;
   padding-bottom: 0px;
+}
+
+/* This is the css desing of the sql data section */
+
+.sql_control_menu {
+  background-color: white;
+  font-family: var(--global-family, 'Times New Roman');
+  font-size: var(--global-font-size, 12px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.sql_menu_button {
+  color: var(--global-fg, black);
+  background-color: var(--global-bg, white);
+  border-color: var(--global-fg, black);
+  border-width: thin;
+  border-radius: 6px;
+  border-style: solid;
+}
+
+/* This is the desing of the css table for sql general data */
+
+.sql_desing {
+  /*border: 2px solid #FFFFFF;*/
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.sql_desing td, .sql_desing th {
+  border: 1px solid #FFFFFF;
+  padding: 4px 4px;
+}
+
+.sql_desing tbody td {
+  font-size: var(--table-body-font-size, 13px);
+}
+
+.sql_desing tr:nth-child(even) {
+  background: var(--even-colour-bg);
+}
+
+.sql_desing tr:nth-child(odd) {
+  background: var(--odd-colour-bg);
+}
+
+.sql_desing thead {
+  background: #FFFFFF;
+  /*border-bottom: 2px solid #333333;*/
+}
+
+.sql_desing thead tr {
+  padding-right: var(--table-scrollbar-width, 12px);
+}
+
+.sql_desing thead th {
+  font-size: var(--table-headings-font-size, 14px);
+  font-weight: bold;
+  text-align: center;
+}
+
+.sql_desing thead th:first-child {
+  border-left: none;
+}
+
+.sql_desing tfoot {
+  font-size: var(--table-headings-font-size, 14px);
+  font-weight: bold;
+  background: #FFFFFF;
+  border-top: 2px solid #333333;
+}
+
+.sql_desing tfoot th {
+  font-size: var(--table-headings-font-size, 14px);
+  font-weight: bold;
+  text-align: center;
+}
+
+.sql_table_container {
+  max-height: 500px;
+  overflow-y: auto;
+  border-top: 2px solid #333333;
+  border-bottom: 2px solid #333333;
+}
+
+.sql_table_container::-webkit-scrollbar {
+  width: var(--table-scrollbar-width, 12px);
+}
+
+.sql_table_container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.sql_table_container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 6px;
+  border: 3px solid #f1f1f1;
+}
+
+.sql_table_container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Firefox */
+
+.sql_table_container {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
 }
 

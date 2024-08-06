@@ -2,8 +2,10 @@
 
 function header(ID, theme = "default") {
     console.log("In header function.");
-    var content = "",
+    var content = "";
+    const
         home = location.origin,
+        settings_id = "header_settings",
         logo = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAzFBMVEVHcEz////////+/v77+/vx8fL9/f309fX+/v739/f////09PXOz8/5+vr8/P3////////29vf///////84qlf8wAdGiPX8/PzsUUTqQjQsqFLrSj3S3/w6g/TqPCs0gPQgpUf85+bv9P+63sL62Nb+8ef4ycbw+PJkunkeePP81HXwgGv0jhzc5/3o9efX7N5Fr19Uj/WQy562zPr2trL94KDzoJrzoJv80Gjyl5H94qgyh9v7xzihsSp+wYV1sE5ZtXBmmvUynoWKrvzKDGT6AAAAE3RSTlMAW+TTeBLcHLMt1WsKzfUznkBIxSDAuAAAAUZJREFUKJFtktligkAMRUFZxKVuDMOAggpu1apVu+/t//9TkxBU1PsySQ4hlyGadpTd0fWOrV2R3eqyWhe80j1RpYCc7pmcI2tyaZimQw6bOTMplU9hpKIofJSUmgwtTCYq9EFhqKIJ5lbGdGIRAGhUQLNX6wRLOA2Y8vdpuvfVOJtaOjhdhL56yYrjU8cGFsRSLc4/x+DPfxBiSZN6LMlXUYXzVghBT8/7pPkdxFX28yzEO8HYI8U9dlQudMZx3AeInWWe+SrExxrhCLTre3E+M3P7FXznLn887z53a2PwGbjBLLvUP2jcYUC/FYdOA9d1g22SbN1fbizT9bUxXA+QguB4G2GlfbIFqw1i0GCzKmzDDQ1LZgPQLKHk5rAJpmSj0ykH0jxArW4V79yqF1bMkEckjYvFrTWIy0btApFsx7m68Ff1D4OdMHbngtKsAAAAAElFTkSuQmCC",
         item = document.getElementById(ID),
         css_theme = get_correct_prefix(theme),
@@ -40,9 +42,7 @@ function header(ID, theme = "default") {
     content += `                <p style="margin-bottom: 0px;">Visitors: <span>0000001</span></p>\n`
     content += `            </section>\n`
     content += `        </aside>\n`
-    content += `        <section>\n`
-    content += `            <button>settings</button>\n`
-    content += `        </section>\n`
+    content += `        <section id="${settings_id}"></section>\n`
     content += `    </div>\n`
     content += `<script async="" defer="" src=""></script>`
 
@@ -52,6 +52,8 @@ function header(ID, theme = "default") {
     github_button_script.src = 'https://buttons.github.io/buttons.js';
     github_button_script.async = true;
     github_button_script.defer = true;
+
+    inject_settings(settings_id, theme);
 
     item.classList.add(`${css_theme}header`);
     item.innerHTML += content;

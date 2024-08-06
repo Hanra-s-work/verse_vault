@@ -1,0 +1,57 @@
+/* This is the css page that will customise the aspect of the settings section */
+
+/* Basic styling */
+
+.hidden {
+  display: none;
+}
+
+/* Flex layout for sections */
+
+aside section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+aside p {
+  margin-right: 10px;
+}
+
+/* The setting button container desing */
+
+.settings_trigger {
+  color: black;
+  background-color: white;
+}
+
+.settings_trigger_button {
+  font-weight: bold;
+}
+
+/* Font styling */
+
+.font_section {
+  display: flex;
+  flex-direction: row;
+}
+
+.font_select {
+}
+
+/* Size styling */
+
+.size_section {
+}
+
+/* Theme styling */
+
+.theme_section {
+  display: flex;
+  flex-direction: row;
+}
+
+.settings_menu_container {
+  background-color: var(--bs-highlight-bg);
+}
+
