@@ -38,7 +38,19 @@ function get_fonts_if_not_fetched() {
 }
 
 function change_font(font_name) {
+    console.log(`(change_font) font_name = "${font_name}"`);
+    const root = document.documentElement,
+        font_targets = ['--global-family'];
     document.body.style.fontFamily = font_name;
+    for (var i in font_targets) {
+        root.style.setProperty(font_targets[i], font_name);
+    }
+
+}
+
+function _get_users_choice(evt) {
+    const font = evt.target.value;
+    change_font(font);
 }
 
 function inject_fonts_header_block(theme) {
@@ -51,9 +63,9 @@ function inject_fonts_header_block(theme) {
     }
     content += `    <section id="font" class="${css_theme}header_settings_font_section">\n`;
     content += `        <p>Font:</p>\n`;
-    content += `        <select id="font_options" class="${css_theme}header_settings_font_select">\n`;
+    content += `        <select id="font_options" class="${css_theme}header_settings_font_select" onchange="_get_users_choice(event)">\n`;
     for (var i in fonts) {
-        content += `            <option value="${fonts[i]}">${fonts[i]}</option>\n`;
+        content += `            <option value="${fonts[i]}" style="font-family:'${fonts[i]}';">${fonts[i]}</option>\n`;
     }
     content += `        </select>\n`;
     content += `    </section>\n`;
