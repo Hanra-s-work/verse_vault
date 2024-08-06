@@ -2,56 +2,58 @@
 
 /* Basic styling */
 
-.hidden {
+.header_settings_hidden {
   display: none;
 }
 
 /* Flex layout for sections */
 
-aside section {
+.header_settings_menu_container section {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
 }
 
-aside p {
+.header_settings_menu_container p {
   margin-right: 10px;
 }
 
 /* The setting button container desing */
 
-.settings_trigger {
+.header_settings_settings_trigger {
   color: black;
   background-color: white;
 }
 
-.settings_trigger_button {
+.header_settings_settings_trigger_button {
   font-weight: bold;
 }
 
 /* Font styling */
 
-.font_section {
+.header_settings_font_section {
   display: flex;
   flex-direction: row;
 }
 
-.font_select {
+.header_settings_font_select {
 }
 
 /* Size styling */
 
-.size_section {
-}
-
-/* Theme styling */
-
-.theme_section {
+.header_settings_size_section {
   display: flex;
   flex-direction: row;
 }
 
-.settings_menu_container {
+/* Theme styling */
+
+.header_settings_theme_section {
+  display: flex;
+  flex-direction: row;
+}
+
+.header_settings_settings_menu_container {
   background-color: var(--bs-highlight-bg);
 }
 

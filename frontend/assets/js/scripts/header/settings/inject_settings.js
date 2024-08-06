@@ -5,24 +5,19 @@ function inject_settings(ID, theme) {
     const css_theme = get_correct_prefix(theme),
         item = document.getElementById(ID);
 
-    content += `<section class="${css_theme}settings_trigger">\n`;
-    content += `    <button id="settings_button" class="${css_theme}settings_trigger_button btn">Settings</button>\n`;
+    content += `<section class="${css_theme}header_settings_settings_trigger">\n`;
+    content += `    <button id="settings_button" class="${css_theme}header_settings_settings_trigger_button btn">Settings</button>\n`;
     content += '</section>\n';
-    content += `<aside id="settings_menu" class="${css_theme}settings_menu_container">\n`;
-    content += `    <section id="font" class="${css_theme}font_section">\n`;
-    content += `        <p>Font:</p>\n`;
-    content += `        <select id="font_options" class="${css_theme}font_select">\n`;
-    content += `            <option value="font1">Font 1</option>\n`;
-    content += `            <option value="font2">Font 2</option>\n`;
-    content += `            <option value="font3">Font 3</option>\n`;
-    content += `        </select>\n`;
+    content += `<aside id="settings_menu" class="${css_theme}header_settings_settings_menu_container header_settings_hidden">\n`;
+    content += inject_fonts_header_block(theme);
+    content += `    <section id="size" class="${css_theme}header_settings_size_section">\n`;
+    content += `        <p>Size:</p>\n`;
+    content += `        <input class="form-range ${css_theme}header_settings_size_input" type="range" min="1" max="200" step="1" value="20">\n`;
     content += `    </section>\n`;
-    content += `    <section id="size" style="display:flex;flex-align:row;">\n`;
-    content += `        <p>Size:</p><input class="form-range" type="range" min="1" max="200" step="1" value="20">\n`;
-    content += `    </section>\n`;
-    content += `    <section id="dark_light" style="display:flex;flex-align:row;">\n`;
+    content += `    <section id="dark_light" class="${css_theme}header_settings_theme_section">\n`;
     content += `        <p>Theme:</p>\n`;
-    content += `        <div class="theme-switcher dropdown"><button class="btn btn-link dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" type="button" style="color: var(--bs-body-color);"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill mb-1">\n`;
+    content += `        <div class="theme-switcher dropdown">\n`;
+    content += `        <button class="btn btn-link dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" type="button" style="color: var(--bs-body-color);"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill mb-1">\n`;
     content += `                    <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>\n`;
     content += `                </svg></button>\n`;
     content += `            <div class="dropdown-menu"><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="light"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill opacity-50 me-2">\n`;

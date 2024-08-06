@@ -4,4 +4,5 @@ function injector(ID, theme) {
     cookie_notice(ID, theme);
     add_padding(ID, 20);
     table_path('page_path', location.pathname, theme);
+    gather_fonts();
 }

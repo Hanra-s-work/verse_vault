@@ -53,9 +53,10 @@ function header(ID, theme = "default") {
     github_button_script.async = true;
     github_button_script.defer = true;
 
-    inject_settings(settings_id, theme);
-
     item.classList.add(`${css_theme}header`);
     item.innerHTML += content;
     item.appendChild(github_button_script);
+
+    // adding the settings menu
+    inject_settings(settings_id, theme);
 }
