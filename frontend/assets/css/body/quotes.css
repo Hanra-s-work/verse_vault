@@ -1,6 +1,6 @@
 /* This is the css stylesheet that defines the desing for the quotes side of the website */
 
-* {
+:root {
   --quotes-global-family: var(--global-family, 'Times New Roman');
   --quotes-table-list-family: var(--quotes-global-family, --global-family, 'Times New Roman');
   --quotes-table-list-title-family: var(--quotes-global-family, --global-family, 'Times New Roman');
@@ -20,6 +20,10 @@
   justify-content: space-between;
   padding-left: 10px;
   padding-right: 10px;
+  left: 0;
+  right: 0;
+  position: fixed;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* main */

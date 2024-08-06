@@ -2,7 +2,7 @@
 
 function inject_settings(ID, theme) {
     var content = "";
-    const css_theme = get_correct_prefix(theme),
+    const css_theme = get_correct_prefix(""),//theme
         item = document.getElementById(ID);
 
     content += `<section class="${css_theme}header_settings_settings_trigger">\n`;

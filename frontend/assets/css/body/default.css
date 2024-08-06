@@ -1,8 +1,8 @@
 /* This is the css stylesheet that will contain general css rules for overriding bootstrap designs */
 
-* {
-  --global-fg: black;
-  --global-bg: white;
+:root {
+  --global-fg: var(--bs-body-color, black);
+  --global-bg: var(--bs-body-bg, white);
   --global-family: 'Times New Roman';
   --global-table-list-family: var(--global-family, 'Times New Roman');
   --global-table-list-title-family: var(--global-family, 'Times New Roman');
@@ -25,6 +25,10 @@
   justify-content: space-between;
   padding-left: 10px;
   padding-right: 10px;
+  left: 0;
+  right: 0;
+  position: fixed;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Settings window */
@@ -83,7 +87,13 @@
 }
 
 .header_settings_settings_menu_container {
-  background-color: var(--bs-highlight-bg);
+  position: fixed;
+  top: 42px;
+  right: 0;
+  z-index: 1000;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--global-bg);
 }
 
 /* main */

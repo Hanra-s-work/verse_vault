@@ -22,6 +22,8 @@ function gather_fonts() {
 
     let fonts = Array.from(font_faces);
 
+    fonts.sort();
+
     console.log(fonts);
     console.log(`(gather_fonts) fonts = ${JSON.stringify(fonts)}`);
     localStorage.setItem(available_fonts_key, JSON.stringify(fonts));
@@ -42,7 +44,7 @@ function change_font(font_name) {
 function inject_fonts_header_block(theme) {
     var content = "";
     const fonts = get_fonts_if_not_fetched(),
-        css_theme = get_correct_prefix(theme);
+        css_theme = get_correct_prefix("");//theme
     if (localStorage.getItem(fonts_api_available_key) === fonts_api_available_false) {
         console.error("(inject_fonts_header_block) document.fonts not available");
         return content;
@@ -51,7 +53,7 @@ function inject_fonts_header_block(theme) {
     content += `        <p>Font:</p>\n`;
     content += `        <select id="font_options" class="${css_theme}header_settings_font_select">\n`;
     for (var i in fonts) {
-        content += `            <option value="${i}">${i}</option>\n`;
+        content += `            <option value="${fonts[i]}">${fonts[i]}</option>\n`;
     }
     content += `        </select>\n`;
     content += `    </section>\n`;

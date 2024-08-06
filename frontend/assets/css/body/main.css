@@ -1,6 +1,6 @@
 /* This is the css stylesheet that defines the rules for the main section of the website */
 
-* {
+.root {
   --main-global-family: var(--global-family, 'Times New Roman');
   --main-table-list-family: var(--main-global-family, --global-family, 'Times New Roman');
   --main-table-list-title-family: var(--main-global-family, --global-family, 'Times New Roman');
@@ -21,6 +21,10 @@
   padding-top: 12px;
   padding-bottom: 12px;
   margin: 0px;
+  left: 0;
+  right: 0;
+  position: fixed;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .main_header_left {
