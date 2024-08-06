@@ -33,4 +33,5 @@ function inject_settings(ID, theme) {
     content += '</aside>\n';
 
     item.innerHTML = content;
+    inject_listeners();
 }
