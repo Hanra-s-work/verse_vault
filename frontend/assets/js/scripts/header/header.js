@@ -63,4 +63,7 @@ function header(ID, theme = "default") {
 
     // adding the table of contents
     table_of_contents(toc_id, "", theme, true);
+
+    // adding padding to the body
+    add_padding("body_main", 8, true);
 }
