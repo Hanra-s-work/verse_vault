@@ -4,9 +4,9 @@ function header(ID, theme = "default") {
     console.log("In header function.");
     var content = "";
     const
-        home = location.origin,
+        home = constants.home,
         settings_id = "header_settings",
-        logo = `${home}/icon/temporary_icon.png`,
+        logo = `${constants.img_src}/icon/temporary_icon.png`,
         item = document.getElementById(ID),
         css_theme = get_correct_prefix(theme),
         toc_id = "table_of_contents_header_id",
