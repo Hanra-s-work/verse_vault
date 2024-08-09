@@ -78,6 +78,7 @@ web_modules/
 .env.test.local
 .env.production.local
 .env.local
+bootstrap_project/post_export_script
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
