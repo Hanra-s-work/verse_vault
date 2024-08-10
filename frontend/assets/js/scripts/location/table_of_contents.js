@@ -61,10 +61,20 @@ function _add_header_dropdown(pages, css_theme, theme_key, indentation_key, inde
         nb_pages = pages.length,
         home = location.origin,
         prev_indentation = pages[index][indentation_key];
+    /*
+    <div class="dropdown">
+  <a href="https://www.google.com"><button class="dropbtn" onclick="location.href='https://www.google.com'">Dropdown</button></a>
+  <div class="dropdown-content">
+    <a href="https://www.google.com">Link 1</a>
+    <a href="https://www.google.com">Link 2</a>
+    <a href="https://www.google.com">Link 3</a>
+  </div>
+</div>
+ */
     body += `<div class="nav-item dropdown">\n`;
-    body += `<a class="dropdown-toggle active" aria-expanded="false" data-bs-toggle="dropdown" href="#">${item}</a>\n`;
+    body += `<a class="dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" href="${home}${pages[index][item]}">${item}</a>\n`;
     body += `<div class="dropdown-menu">\n`;
-    body += `<a class="dropdown-item" href="${home}${pages[index][item]}">${item}</a>\n`;
+    // body += `<a class="dropdown-item" href="${home}${pages[index][item]}">${item}</a>\n`;
     while (indents < nb_pages && pages[indents][indentation_key] > prev_indentation) {
         for (var node in pages[indents]) {
             if (indents + 1 < nb_pages && pages[indents + 1][indentation_key] > prev_indentation + 1) {
@@ -80,6 +90,16 @@ function _add_header_dropdown(pages, css_theme, theme_key, indentation_key, inde
     }
     body += `</div></div>`;
     return { 'i': indents, 'body': body }
+}
+
+function _inject_link_in_hover() {
+    document.querySelectorAll('.nav-link.dropdown-toggle').forEach(function (element) {
+        element.addEventListener('click', function (event) {
+            if (element.getAttribute('href') !== '#') {
+                window.location.href = element.getAttribute('href');
+            }
+        });
+    });
 }
 
 function _table_for_header(pages, css_theme, theme_key, indentation_key) {
@@ -111,6 +131,7 @@ function _table_for_header(pages, css_theme, theme_key, indentation_key) {
     body += "</div>\n";
     body += "</div>\n";
     body += "</nav>\n";
+    _inject_link_in_hover();
     return body;
 }
 function table_of_contents(ID, location = "", theme = "", in_header = true) {

@@ -115,6 +115,12 @@
   font-size: var(--global-font-size, 12px);
 }
 
+/* header toc styling */
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
 /* Pages navigation desing */
 
 #toc {
