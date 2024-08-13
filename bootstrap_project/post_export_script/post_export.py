@@ -51,3 +51,6 @@ Return [home](/)
 
 with open(f"{CWD}/404.md", "w", encoding="utf-8", newline="\n") as error_page:
     error_page.write(PAGE_404)
+
+with open(f"{CWD}/../404.md", "w", encoding="utf-8", newline="\n") as error_page:
+    error_page.write(PAGE_404)
