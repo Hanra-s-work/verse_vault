@@ -63,14 +63,16 @@ function _add_header_dropdown(pages, css_theme, theme_key, indentation_key, inde
         prev_indentation = pages[index][indentation_key];
     /*
     <div class="dropdown">
-  <a href="https://www.google.com"><button class="dropbtn" onclick="location.href='https://www.google.com'">Dropdown</button></a>
-  <div class="dropdown-content">
-    <a href="https://www.google.com">Link 1</a>
-    <a href="https://www.google.com">Link 2</a>
-    <a href="https://www.google.com">Link 3</a>
-  </div>
-</div>
- */
+        <a href="https://www.google.com">
+            <button class="dropbtn" onclick="location.href='https://www.google.com'">Dropdown</button>
+        </a>
+        <div class="dropdown-content">
+            <a href="https://www.google.com">Link 1</a>
+            <a href="https://www.google.com">Link 2</a>
+            <a href="https://www.google.com">Link 3</a>
+        </div>
+    </div>
+     */
     body += `<div class="nav-item dropdown">\n`;
     body += `<a class="dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" href="${home}${pages[index][item]}">${item}</a>\n`;
     body += `<div class="dropdown-menu">\n`;
