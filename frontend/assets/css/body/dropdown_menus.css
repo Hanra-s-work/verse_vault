@@ -1,5 +1,17 @@
-.menu {
+/* This is the dropdown stylesheet that will be used for the dropdown menu snipsets */
+
+:root {
   --menu-height: 40px;
+  --menu-fg: #ffffff;
+  --menu-bg: #000000;
+  --menu-arrow: #FFA500;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+.menu {
   box-sizing: border-box;
   position: fixed;
   top: 0;
@@ -15,7 +27,7 @@
 
 .menu ul li, .menu ul li a {
   opacity: .8;
-  color: #ffffff;
+  color: var(--menu-fg);
   cursor: pointer;
   transition: 200ms;
   text-decoration: none;
@@ -45,7 +57,7 @@
   height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 5px solid #FFA500;
+  border-top: 5px solid var(--menu-arrow);
   position: absolute;
   right: 8px;
   top: 50%;
@@ -61,7 +73,7 @@
   display: flex;
   height: var(--menu-height);
   align-items: center;
-  background-color: #000000;
+  background-color: var(--menu-bg);
 }
 
 .menu > ul li {
@@ -74,9 +86,9 @@
   opacity: 0;
   padding: 0;
   min-width: 160px;
-  background-color: #333;
+  background-color: var(--menu-bg);
   position: absolute;
-  top: calc(var(--menu-height) + 5px);
+  top: calc(var(--menu-height) - 8px);
   left: 50%;
   transform: translateX(-50%);
   transition: 200ms;
@@ -98,7 +110,7 @@
   height: 0;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
-  border-left: 5px solid #FFA500;
+  border-left: 5px solid var(--menu-arrow);
 }
 
 .menu > ul li ul li ul {
@@ -108,7 +120,7 @@
 }
 
 .menu > ul li ul li:hover {
-  background-color: #000000;
+  background-color: var(--menu-bg);
 }
 
 .menu > ul li:hover > ul {
