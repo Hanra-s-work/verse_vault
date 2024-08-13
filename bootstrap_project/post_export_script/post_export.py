@@ -34,3 +34,10 @@ with open(JSON_PATH, "w", encoding="utf-8", newline="\n") as final_json_fp:
     json.dump(data, final_json_fp, indent=4)
 
 print("JSON file updated successfully.")
+
+# Creating the custom 404 error page redirect
+
+with open(f"{CWD}/404.md", "w", encoding="utf-8", newline="\n") as error_page:
+    error_page.write(
+        "---\npermalink: /error/404/index.html\nlayout: error\n---\n\n"
+    )
